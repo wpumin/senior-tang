@@ -1,0 +1,22 @@
+
+input, button, .btn, select{
+    font-size: 1.6rem !important;    
+    height: 42px !important;
+    padding: 0.75rem !important;
+    margin-top: 0.5rem;
+}
+
+.card{
+    border: 0 !important;
+    border-radius: 6px !important;
+    box-shadow: 2px 2px 6px 0.2px rgba(0, 0, 0, 0.25) !important;
+    &-header{
+        padding: 1.5rem 0 !important; 
+        background: linear-gradient(to bottom, #17487b, #0d3966);
+        border-radius: 6px 6px 0 0 !important;
+        color: white;
+    }
+    &-body{
+        padding: 1.5rem !important;
+    }
+}

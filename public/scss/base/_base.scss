@@ -1,0 +1,180 @@
+// ? General Style -------------------------------------------------
+
+::placeholder,
+input,
+select,
+textarea,
+button {
+    @include font-style($font-regular);
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px;
+    transition: 0.3s all;
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1.2;
+    @include font-style($font-regular, normal, $xsSize, $primary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover{
+        color: inherit;
+    }
+}
+
+::-moz-selection {
+    color: $white;
+    background: $secondary;
+}
+
+::selection {
+    color: $white;
+    background: $secondary;
+}
+
+::placeholder {
+    color: $gray;
+    opacity: 0.75;
+}
+
+::-ms-input-placeholder {
+    color: $gray;
+}
+
+h1 {
+    @include font-style($font-bold, normal, $mdSize, $primary);
+
+    @include respond(md){
+        font-size: $xlSize;
+    }
+}
+
+h2 {
+    @include font-style($font-bold, normal, $sSize, $primary);
+
+    @include respond(md){
+        font-size: $lSize;
+    }
+}
+
+h3 {
+    @include font-style($font-bold, normal, 2.2rem, $primary);
+
+    @include respond(md){
+        font-size: $mdSize;
+    }
+}
+
+h4 {
+    @include font-style($font-bold, normal, 1.8rem, $primary);
+
+    @include respond(md){
+        font-size: 2rem;
+    }
+}
+
+p, th, td, button{
+    @include font-style($font-regular, normal, 1.6rem, $primary);
+
+    @include respond(lg){
+        font-size: $xsSize;
+    }
+}
+
+// ? General Class -------------------------------------------------
+
+.active {
+    font-size: bold;
+    color: $active;
+}
+
+.hidden{
+    display: none;
+}
+
+.content{
+    position: relative; 
+    padding-top: 5.75rem;
+
+    @include respond(md){
+        padding-top: 6.75rem;
+    }
+
+    @include respond(lg){
+        padding-top: 11rem;
+    }
+}
+
+.content-wrapper{
+    padding: 10rem 0 4rem 0;
+
+    @include respond(lg){
+        padding: 13rem 0 5rem 0;
+    }
+}
+
+.small-text{
+    @include font-style($font-regular, normal, 1.6rem !important);
+
+    @include respond(md){
+        font-size: 1.4rem !important;
+    }
+}
+
+.underline{
+    transition: 0.3s all;
+    text-decoration: underline !important;
+}
+
+.rotated-reset{
+    padding-left: 0.75rem;
+    display: inline-block !important;
+    transition: 0.3s all;
+}
+
+.rotated{
+    transition: 0.3s all;
+    display: inline-block;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.dropdown-menu.show-mobile{
+    @media only screen and(max-width: 992px){
+        display: block;
+    }
+}
+
+select.form-control[multiple]{
+    min-height: 130px !important;
+    @include respond(sm){
+        min-height: 200px !important;
+    }
+}
+
+.h2y-h2{
+    @include respond(lg){
+        width: 390px;
+    }
+    @include respond(xl){
+        width: 100%;
+    }
+}
+
+.strong{
+    font-weight: bold;
+}
+
+.hide-contact{
+    display: none;
+    // transition: 0.3s all;
+}

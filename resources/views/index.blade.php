@@ -23,7 +23,7 @@
                                 <p class="text-white py-3 pb-md-4"><i class="flaticon-compass-1"></i> <span
                                         class="strong">ทิศทางคลื่น:</span> <span id="swellDirection">85</span> องศา</p>
                                 <p class="text-white py-3 pb-md-4"><i class="flaticon-wind"></i> <span
-                                        class="strong">คาบ (คลื่น):</span> <span id="swellPeriod">85</span> ลูก/วินาที
+                                        class="strong">คาบ (คลื่น):</span> <span id="swellPeriod">4</span> ลูก/วินาที
                                 </p>
                             </div>
                             <div class="col-md-6 px-0">
@@ -31,7 +31,7 @@
                                         class="strong">ความเร็วลม:</span> <span id="windSpeed">18</span>
                                     กิโลเมตร/ชั่วโมง</p>
                                 <p class="text-white py-3 pb-md-4"><i class="flaticon-compass-1"></i> <span
-                                        class="strong">ทิศทางลม:</span> <span id="windDirection">85</span> องศา</p>
+                                        class="strong">ทิศทางลม:</span> <span id="windDirection">91</span> องศา</p>
                                 <p class="text-white py-3 pb-md-4"><i class="flaticon-clock"></i> <span
                                         class="strong">ข้อมูลเมื่อ:</span> <span id="time"></span></p>
                             </div>
@@ -281,8 +281,7 @@
     const dd = String(today.getDate()).padStart(2, '0');
     const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     const yyyy = today.getFullYear();
-    const timeTemp = ("0" + (today.getHours())).slice(-2) + ":" + ("0" + (today.getMinutes())).slice(-2) + ":" + ("0" +
-        (today.getSeconds())).slice(-2);
+    const timeTemp = ("0" + (today.getHours())).slice(-2) + ":" + ("0" + (today.getMinutes())).slice(-2) + ":" + ("0" + (today.getSeconds())).slice(-2);
 
     fetch(`https://api.stormglass.io/v1/weather/point?lat=${lat}&lng=${lng}&numberOfDays=${numberOfDays}&params=${params}`, {
         headers: {
@@ -293,14 +292,14 @@
         // console.log(jsonObject);
         // console.log(jsonObject.hours[6]);
 
-        console.log(jsonData.hours[6]);
+        time.innerHTML = timeTemp + " น. วันที่ " + dd + "/" + mm + "/" + (parseInt(yyyy) + 543);
 
+        console.log(jsonData.hours[6]);
         swellHeight.innerHTML = (parseFloat(jsonData.hours[6].swellHeight[0].value)).toFixed(2);
         swellDirection.innerHTML = jsonData.hours[6].swellDirection[0].value.toFixed(2);
         swellPeriod.innerHTML = jsonData.hours[6].swellPeriod[0].value.toFixed(2);
         windSpeed.innerHTML = (parseFloat(jsonData.hours[6].windSpeed[0].value * 3.6)).toFixed(2);
         windDirection.innerHTML = jsonData.hours[6].windDirection[0].value.toFixed(2);
-        time.innerHTML = timeTemp + " น. วันที่ " + dd + "/" + mm + "/" + (parseInt(yyyy) + 543);
     });
 
 </script>

@@ -130,7 +130,7 @@
                         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
                         <ul class="menu">
                             <li><a href="{{ url('/show-detail') }}" class="<?php if($menu_active2 == "show-detail"){ echo "active"; } ?>"> <i class="flaticon-internet"></i> ข้อมูล</a></li>
-                            <li><a href="{{ url('/calculate') }}" class="<?php if($menu_active2 == "calculate" || $menu_active2 == "result"){ echo "active"; } ?>"> <i class="flaticon-calculator"></i> คำนวณเส้นทาง</a></li>
+                            <li><a href="{{ url('/calculate') }}" class="<?php if($menu_active2 == "calculate" || $menu_active2 == "result" || $menu_active2 == "calculate2"){ echo "active"; } ?>"> <i class="flaticon-calculator"></i> คำนวณเส้นทาง</a></li>
                             <li><a href="{{ url('/') }}" class=""> <i class="flaticon-logout"></i> ออกจากระบบ</a></li>
                         </ul>
                     </div>

@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="content-wrapper">
-    <h1 class="text-primary pb-5 text-center">คำนวณเส้นทางการเดินเรือ</h1>
+    <h1 class="text-primary pb-5 text-center">เงื่อนไขการเดินเรือ</h1>
     <div class="container-fluid">
         <div class="row">
             <form method="POST" action="" class="col-md-12 px-md-0" id="form-notallowed">
@@ -32,72 +32,62 @@
                     </div>
                 </div>
                 <div class="form-group row pt-md-2">
-                    <label for="title" class="col-md-12 col-form-label strong">{{ __('1. เกาะไหง') }}</label>
+                    <label for="title" class="col-md-12 col-form-label strong">{{ __('เกาะที่ 1') }}</label>
                     <div class="col-md-12">
                         <select class="form-control" id="island1" name="island1">
-                            <option value="" disabled hidden selected="selected">สถานะเกาะวันนี้*</option>
-                            <option value="0">เปิด</option>
-                            <option value="1">ปิด</option>
+                            <option value="" disabled hidden selected="selected">เลือกเกาะที่จะเดินทางไป*</option>
+                            <option value="0">เกาะไหง</option>
+                            <option value="1">เกาะม้า</option>
+                            <option value="2">เกาะเชือก</option>
+                            <option value="3">เกาะแหวน</option>
+                            <option value="4">เกาะรอก</option>
+                            <option value="5">เกาะกระดาน</option>
+                            <option value="6">เกาะมุกต์</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group row pt-md-2">
-                    <label for="title" class="col-md-12 col-form-label strong">{{ __('2. เกาะม้า') }}</label>
+                    <label for="title" class="col-md-12 col-form-label strong">{{ __('เกาะที่ 2') }}</label>
                     <div class="col-md-12">
-                        <select class="form-control" id="island2" name="island2">
-                            <option value="" disabled hidden selected="selected">สถานะเกาะวันนี้*</option>
-                            <option value="0">เปิด</option>
-                            <option value="1">ปิด</option>
+                        <select class="form-control" id="island1" name="island1">
+                            <option value="" disabled hidden selected="selected">เลือกเกาะที่จะเดินทางไป*</option>
+                            <option value="0">เกาะไหง</option>
+                            <option value="1">เกาะม้า</option>
+                            <option value="2">เกาะเชือก</option>
+                            <option value="3">เกาะแหวน</option>
+                            <option value="4">เกาะรอก</option>
+                            <option value="5">เกาะกระดาน</option>
+                            <option value="6">เกาะมุกต์</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group row pt-md-2">
-                    <label for="title" class="col-md-12 col-form-label strong">{{ __('3. เกาะเชือก') }}</label>
+                    <label for="title" class="col-md-12 col-form-label strong">{{ __('เกาะที่ 3') }}</label>
                     <div class="col-md-12">
-                        <select class="form-control" id="island3" name="island3">
-                            <option value="" disabled hidden selected="selected">สถานะเกาะวันนี้*</option>
-                            <option value="0">เปิด</option>
-                            <option value="1">ปิด</option>
+                        <select class="form-control" id="island1" name="island1">
+                            <option value="" disabled hidden selected="selected">เลือกเกาะที่จะเดินทางไป*</option>
+                            <option value="0">เกาะไหง</option>
+                            <option value="1">เกาะม้า</option>
+                            <option value="2">เกาะเชือก</option>
+                            <option value="3">เกาะแหวน</option>
+                            <option value="4">เกาะรอก</option>
+                            <option value="5">เกาะกระดาน</option>
+                            <option value="6">เกาะมุกต์</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group row pt-md-2">
-                    <label for="title" class="col-md-12 col-form-label strong">{{ __('4. เกาะแหวน') }}</label>
+                    <label for="title" class="col-md-12 col-form-label strong">{{ __('เกาะที่ 4') }}</label>
                     <div class="col-md-12">
-                        <select class="form-control" id="island4" name="island4">
-                            <option value="" disabled hidden selected="selected">สถานะเกาะวันนี้*</option>
-                            <option value="0">เปิด</option>
-                            <option value="1">ปิด</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row pt-md-2">
-                    <label for="title" class="col-md-12 col-form-label strong">{{ __('5. เกาะรอก') }}</label>
-                    <div class="col-md-12">
-                        <select class="form-control" id="island5" name="island5">
-                            <option value="" disabled hidden selected="selected">สถานะเกาะวันนี้*</option>
-                            <option value="0">เปิด</option>
-                            <option value="1">ปิด</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row pt-md-2">
-                    <label for="title" class="col-md-12 col-form-label strong">{{ __('6. เกาะกระดาน') }}</label>
-                    <div class="col-md-12">
-                        <select class="form-control" id="island6" name="islan" d6>
-                            <option value="" disabled hidden selected="selected">สถานะเกาะวันนี้*</option>
-                            <option value="0">เปิด</option>
-                            <option value="1">ปิด</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row pt-md-2">
-                    <label for="title" class="col-md-12 col-form-label strong">{{ __('7. เกาะมุกต์') }}</label>
-                    <div class="col-md-12">
-                        <select class="form-control" id="island7" name="island7">
-                            <option value="" disabled hidden selected="selected">สถานะเกาะวันนี้*</option>
-                            <option value="0">เปิด</option>
-                            <option value="1">ปิด</option>
+                        <select class="form-control" id="island1" name="island1">
+                            <option value="" disabled hidden selected="selected">เลือกเกาะที่จะเดินทางไป*</option>
+                            <option value="0">เกาะไหง</option>
+                            <option value="1">เกาะม้า</option>
+                            <option value="2">เกาะเชือก</option>
+                            <option value="3">เกาะแหวน</option>
+                            <option value="4">เกาะรอก</option>
+                            <option value="5">เกาะกระดาน</option>
+                            <option value="6">เกาะมุกต์</option>
                         </select>
                     </div>
                 </div>
@@ -107,13 +97,51 @@
                                 class="text-danger">คลิก</span></a>
                     </div>
                 </div>
+                <div class="col-md-12 col-lg-12 px-0 py-3 pb-5">
+                    <div class="forecast-item">
+                        <h3 class="text-white"> <i class="flaticon-files-and-folders"></i> ผลลัพธ์</h3>
+                        <hr style="border-top: 1px solid rgba(255,255,255,.25);" class="pb-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 px-0">
+                                    <p class="text-white py-3 pb-md-4"><i class="flaticon-clock"></i> 
+                                        <span class="strong">เวลาที่ใช้:</span> 
+                                        2 ชั่วโมง 25 นาที
+                                    </p>
+                                    <p class="text-white py-3 pb-md-4"><i class="flaticon-pointer"></i> 
+                                        <span class="strong">เส้นทาง: </span>
+                                        <span class="d-block pt-4 pt-md-0 d-md-inline-block text-center text-md-left">
+                                           เกาะไหง, เกาะม้า, เกาะเชือก, เกาะแหวน, เกาะไหง
+                                        </span> 
+                                    </p>
+                                    {{-- <p class="text-white py-3 pb-md-4"><i class="flaticon-dashboard"></i> 
+                                        <span class="strong">ระยะทาง:</span> 
+                                        43.52 กม.
+                                    </p> --}}
+                                    <hr style="border-top: 1px solid rgba(255,255,255,.25);" class="d-block d-md-none">
+                                    <p class="text-white py-3 pb-md-4 text-left text-md-right"> 
+                                        <span class="strong">ข้อมูลเมื่อ:</span> <span id="time"></span> </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group row pt-3 pt-md-4">
-                    <div class="col-md-3 offset-md-9 p-0">
+                    <div class="col-12 col-md-3 offset-md-6 p-0">
                         <div class="col-12 pt-md-2">
                             {{-- <button type="submit" class="btn btn-primary w-100" id="btn-submit">
                                 {{ __('ยืนยัน') }}
                             </button> --}}
-                            <a href="{{ url('/result') }}" class="btn btn-primary w-100"> ยืนยัน </a>
+                            <a href="{{ url('/calculate2') }}" class="btn btn-primary w-100"> เส้นทางของฉัน </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 p-0">
+                        <div class="col-12 pt-3 pt-md-2">
+                            {{-- <button type="submit" class="btn btn-primary w-100" id="btn-submit">
+                                {{ __('ยืนยัน') }}
+                            </button> --}}
+                            <a href="{{ url('/calculate2') }}" class="btn btn-secondary w-100"> เส้นทางของระบบ </a>
                         </div>
                     </div>
                 </div>

@@ -23,6 +23,10 @@ Route::get('/calculate', function () {
     return view('calculate');
 });
 
+Route::get('/calculate2', function () {
+    return view('calculate2');
+});
+
 Route::get('/result', function () {
     return view('result');
 });

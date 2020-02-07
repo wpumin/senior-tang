@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 06/01/2020 03:39
+    Creation date: 06/02/2020 11:58
     */
 
     @font-face {
@@ -61,8 +61,11 @@
 .flaticon-folder-1:before { content: "\f115"; }
 .flaticon-dashboard:before { content: "\f116"; }
 .flaticon-next:before { content: "\f117"; }
-.flaticon-cloud-2:before { content: "\f118"; }
-.flaticon-cloud-1:before { content: "\f119"; }
+.flaticon-cloud-1:before { content: "\f118"; }
+.flaticon-cloud-2:before { content: "\f119"; }
+.flaticon-seat-belt:before { content: "\f11a"; }
+.flaticon-report:before { content: "\f11b"; }
+.flaticon-bank:before { content: "\f11c"; }
     
     $font-Flaticon-island: "\f100";
     $font-Flaticon-calculator: "\f101";
@@ -88,5 +91,8 @@
     $font-Flaticon-folder-1: "\f115";
     $font-Flaticon-dashboard: "\f116";
     $font-Flaticon-next: "\f117";
-    $font-Flaticon-cloud-2: "\f118";
-    $font-Flaticon-cloud-1: "\f119";
+    $font-Flaticon-cloud-1: "\f118";
+    $font-Flaticon-cloud-2: "\f119";
+    $font-Flaticon-seat-belt: "\f11a";
+    $font-Flaticon-report: "\f11b";
+    $font-Flaticon-bank: "\f11c";
